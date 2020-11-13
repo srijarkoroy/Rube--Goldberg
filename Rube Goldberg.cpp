@@ -27,9 +27,9 @@ typedef struct queue {
 
 /*Function Declaration*/
 Queue *createQueue();
-Queue *display(Queue *);
+void display(Queue *);
 Node *createNode(Person *aPerson, Node *ptro);
-void insert(Person *aPerson, char firstName [40], char lastName [40], int age, char dob [20]);
+void insert(Person *aPerson, Queue *q, char firstName [40], char lastName [40], int age, char dob [20]);
 void read();
 Node *headNode(Queue *c);
 Node *tailNode(Queue *c);
@@ -67,7 +67,7 @@ Node *createNode(Person *aPerson, Node *pointer)
 void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], int age, char dob[20])
 {
 	Node *ptr; 
-	ptr = (struct node*)malloc(sizeof(struct node));
+	ptr = (Node*)malloc(sizeof(Node));
     if(aPerson = (Person *) malloc(sizeof(Person)))
     {
         strcpy(aPerson->firstName, firstName);
@@ -93,9 +93,7 @@ void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], i
 	 q -> tail = ptr;
 	 q -> tail -> next = NULL;
 	}
-}    
-
-/* first node of Queue */
+}
 Node *headNode(Queue *c)
 {
     return c->head;
@@ -115,8 +113,9 @@ bool emptyQueue(Queue *c)
 
 void read()
 {
-
-    
+	
+    Queue * C;
+    C = createQueue();
 
     /* Files to read and write, respectively */
     FILE *input;
@@ -127,7 +126,6 @@ void read()
 
     /* Temp auxiliar Person */
     Person tempPerson;
-    Queue Q;
 
     /* Tokenize */
     char * token;
@@ -178,7 +176,7 @@ void read()
         }
 
         /* Call insert function */
-        insert(&tempPerson, &Q, tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
+        insert(&tempPerson, C , tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
 
         /* Write output file for test */
         fprintf(output, "%s ", tempPerson.firstName);
@@ -193,7 +191,7 @@ void read()
     fclose(output);
 }
 
-Queue *display(struct queue *q)
+void display(Queue *q)
 {
 Node *ptr;
 ptr = q -> head;
@@ -209,7 +207,6 @@ else
  }
  printf("%d\t", ptr -> person);
 }
-return q;
 }
 
 int main (int argc , char ** argv)
@@ -219,7 +216,7 @@ int main (int argc , char ** argv)
     Queue * Q;
     Q = createQueue();
 	read();
-	Q = display(Q);
+	display(Q);
     return 0;
 
 }
