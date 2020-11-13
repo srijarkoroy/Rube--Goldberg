@@ -1,1 +1,4 @@
-# RubeGoldberg
+# Rube Goldberg Machine
+
+## What is a Rube Goldberg Machine?
+This is an attempt to build a virtual Rube Goldberg machine to practice with some of the data structures(Linked Lists, Queues, Stacks, and Trees). A Rube Goldberg Machine is a complex device that performs simple tasks in indirect and convoluted ways Reuben Goldberg was an American engineer who changed his career to cartoonist. He was famous for his political cartoons and satire. However, the works which would lead to his lasting fame involved a character named Professor Lucifer Gorgonzola Butts shown in thefollowing cartoon. In this series, Goldberg drew absurd inventions that would later bear his name: Rube Goldberg Machines. Rube Goldberg received the Pulitzer prize for his satire in 1948.Today there are several contests around the world known as Rube Goldberg contests, which challenge high school students to make complex machines to perform a simple tasks.
