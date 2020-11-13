@@ -27,6 +27,7 @@ typedef struct queue {
 
 /*Function Declaration*/
 Queue *createQueue();
+Queue *display(Queue *);
 Node *createNode(Person *aPerson, Node *ptro);
 void insert(Person *aPerson, char firstName [40], char lastName [40], int age, char dob [20]);
 void read();
@@ -63,8 +64,10 @@ Node *createNode(Person *aPerson, Node *pointer)
     return aNode;
 }
 
-void insert(Person *aPerson, char firstName [40], char lastName[40], int age, char dob[20])
+void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], int age, char dob[20])
 {
+	Node *ptr; 
+	ptr = (struct node*)malloc(sizeof(struct node));
     if(aPerson = (Person *) malloc(sizeof(Person)))
     {
         strcpy(aPerson->firstName, firstName);
@@ -77,6 +80,19 @@ void insert(Person *aPerson, char firstName [40], char lastName[40], int age, ch
         printf("Couldn't insert data\n");
         
     }
+    ptr->person = aPerson;
+    if(q -> head == NULL)
+	{
+		 q -> head = ptr;
+		 q -> tail = ptr;
+		 q -> head -> next = q -> tail -> next = NULL;
+	}
+	else
+	{
+	 q -> tail -> next = ptr;
+	 q -> tail = ptr;
+	 q -> tail -> next = NULL;
+	}
 }    
 
 /* first node of Queue */
@@ -100,8 +116,7 @@ bool emptyQueue(Queue *c)
 void read()
 {
 
-    Queue * C;
-    C = createQueue();
+    
 
     /* Files to read and write, respectively */
     FILE *input;
@@ -112,6 +127,7 @@ void read()
 
     /* Temp auxiliar Person */
     Person tempPerson;
+    Queue Q;
 
     /* Tokenize */
     char * token;
@@ -162,7 +178,7 @@ void read()
         }
 
         /* Call insert function */
-        insert(&tempPerson, tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
+        insert(&tempPerson, &Q, tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
 
         /* Write output file for test */
         fprintf(output, "%s ", tempPerson.firstName);
@@ -177,11 +193,33 @@ void read()
     fclose(output);
 }
 
+Queue *display(struct queue *q)
+{
+Node *ptr;
+ptr = q -> head;
+if(ptr == NULL)
+ printf("\n QUEUE IS EMPTY");
+else
+{
+ printf("\n");
+ while(ptr!=q -> tail)
+ {
+ printf("%d\t", ptr -> person);
+ ptr = ptr -> next;
+ }
+ printf("%d\t", ptr -> person);
+}
+return q;
+}
+
 int main (int argc , char ** argv)
 {
     /* Call read function */
-    read();
-
+    
+    Queue * Q;
+    Q = createQueue();
+	read();
+	Q = display(Q);
     return 0;
 
 }
