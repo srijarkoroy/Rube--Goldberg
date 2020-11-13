@@ -14,7 +14,7 @@ typedef struct person {
 
 /* Node */
 typedef struct node {
-  Person *person;
+  Person *p;
   struct node *next;
 }Node;
 
@@ -26,21 +26,20 @@ typedef struct queue {
 }Queue;
 
 /*Function Declaration*/
-Queue *createQueue();
+/*Queue *createQueue();
 void display(Queue *);
 Node *createNode(Person *aPerson, Node *ptro);
 void insert(Person *aPerson, Queue *q, char firstName [40], char lastName [40], int age, char dob [20]);
 void read();
 Node *headNode(Queue *c);
 Node *tailNode(Queue *c);
-bool emptyQueue(Queue *c);
+bool emptyQueue(Queue *c);*/
 
 Queue *createQueue()
 {
     Queue *aQueue;
-
     /* memory for the Queue */
-    if((aQueue = (Queue *) malloc(sizeof(Queue))))
+    if(aQueue = (Queue *) malloc(sizeof(Queue)))
     {
         /* Queue initialize empty */
         aQueue->size = 0;
@@ -58,13 +57,13 @@ Node *createNode(Person *aPerson, Node *pointer)
     if((aNode = (Node *) malloc(sizeof(Node))))
     {
         /* values of Node */
-        aNode->person = aPerson;
+        aNode->p = aPerson;
         aNode->next = pointer;
     }
     return aNode;
 }
 
-void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], int age, char dob[20])
+Queue* insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], int age, char dob[20])
 {
 	Node *ptr; 
 	ptr = (Node*)malloc(sizeof(Node));
@@ -80,7 +79,7 @@ void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], i
         printf("Couldn't insert data\n");
         
     }
-    ptr->person = aPerson;
+    ptr->p = aPerson;
     if(q -> head == NULL)
 	{
 		 q -> head = ptr;
@@ -93,6 +92,7 @@ void insert(Person *aPerson, Queue *q, char firstName [40], char lastName[40], i
 	 q -> tail = ptr;
 	 q -> tail -> next = NULL;
 	}
+	return q;
 }
 Node *headNode(Queue *c)
 {
@@ -111,10 +111,11 @@ bool emptyQueue(Queue *c)
     return (c->head == NULL) ? true : false;
 }
 
-void read()
+Queue* read()
 {
 	
-    Queue * C;
+    Queue * K;
+	Queue * C;
     C = createQueue();
 
     /* Files to read and write, respectively */
@@ -176,8 +177,8 @@ void read()
         }
 
         /* Call insert function */
-        insert(&tempPerson, C , tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
-
+        K=insert(&tempPerson, C , tempPerson.firstName, tempPerson.lastName, tempPerson.age, tempPerson.dob);
+ 
         /* Write output file for test */
         fprintf(output, "%s ", tempPerson.firstName);
         fprintf(output, "%s ", tempPerson.lastName);
@@ -189,6 +190,7 @@ void read()
     /* Close files */       
     fclose(input);      
     fclose(output);
+    return K;
 }
 
 void display(Queue *q)
@@ -202,10 +204,10 @@ else
  printf("\n");
  while(ptr!=q -> tail)
  {
- printf("%d\t", ptr -> person);
+ printf("%d\t", ptr -> p);
  ptr = ptr -> next;
  }
- printf("%d\t", ptr -> person);
+ printf("%d\t", ptr -> p);
 }
 }
 
@@ -214,8 +216,8 @@ int main (int argc , char ** argv)
     /* Call read function */
     
     Queue * Q;
-    Q = createQueue();
-	read();
+    //Q = createQueue();
+	Q=read();
 	display(Q);
     return 0;
 
