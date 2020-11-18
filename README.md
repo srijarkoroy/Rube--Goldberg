@@ -71,3 +71,11 @@ Stack is a linear data structure which follows a particular order in which <img 
 - Stopping from the terminal:
 
         Ctrl+C
+
+<hr>
+
+## Contributors:
+
+- <a href = "https://github.com/am9964">Ankit Mathur</a>
+- <a href = "https://github.com/indiradutta">Indira Dutta</a>
+- <a href = "https://github.com/srijarkoroy">Srijarko Roy</a>
