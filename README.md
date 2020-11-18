@@ -50,10 +50,24 @@ Stack is a linear data structure which follows a particular order in which <img 
   - day of birth (mm-dd-yy)
 
 - [ ]  Support any number of entries. As the data is read from a file, initially store the data in a queue. 
-- [ ]  Dequeue each element from the queue, print each item, and requeue each item. The user can press any key to continue the processing. 
+- [ ] Dequeue each element from the queue, print each item, and requeue each item. The user can press any key to continue the processing. 
 - [ ]  Reverse the order of the data in the queue by dequeuing each element and pushing them onto a stack. Once all the data is dequeued from the queue and pushed on to the stack, pop off each element of the stack and re-queue each element back into a queue ADT, reversing their order in the queue. Once completed, dequeue each element from the queue and print each item for the user. Requeue to preserve the order.
 - [ ]  Dequeue the elements from the queue and place them into an unordered binary tree. Add the items into the tree ADT in the order they are dequeued, adhering to the binary tree shape property.
 - [ ]  Print the contents of the tree in pre-order and ask the user to press any key to continue the processing. Print the contents of the tree in post-order and ask the user to press any key to continue the processing. Ask the user to press any key to continue the processing.
 - [ ]  Move the data from the unordered binary tree into a linked list ADT using an in-order traversal of the tree. Print the contents of the list and ask the user to press any key to continue the processing.
 - [ ]  Sort the contents of the list using a quick sort in ascending order. Print the contents of the list and ask the user to press any key to continue the processing.
 - [ ]  Allow the user to interactively enter another name, age, and birthday. Add this to the list in the proper location to maintain the sorted order. Print the contents of the list and the user can press any key to continue the processing.
+
+## Steps for usage
+- Cloning the Repository: 
+
+        git clone https://github.com/srijarkoroy/RubeGoldberg.git
+- Entering The directory: 
+
+        cd RubeGoldberg
+- Run the file:
+        
+        application.exe
+- Stopping from the terminal:
+
+        Ctrl+C
