@@ -10,3 +10,6 @@ This is an attempt to build a virtual Rube Goldberg machine to practice with som
 
 ## Description
 Creating a virtual Rube Goldberg Machine with ADTs. The ADTs used includes the queue, stack, binary tree, heap, and many of the associated operations on these ADTs. One way to approach the problem is to think about the functionality from the user’s perspective. This is a reasonable place to start, however we should think in terms of the application being composed of ADTs and operations upon them. The ADTs will contain the data and with each ADT, there are lots of operations upon them.
+<br>
+
+<img src = "assets/Queue.PNG" height = "230" width = "450"> <img src = "assets/Stack.PNG" height = "200" width = "300"> <img src = "assets/BinaryTree.PNG" height = "200" width = "430"> <img src = "assets/Heap.PNG" height = "200" width = "340">
