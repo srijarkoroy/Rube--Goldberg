@@ -1,4 +1,9 @@
-Indira Dutta 20 31/10/2000
-Ankit Mathur 20 25/10/2000
-Adarsh Srivastava 20 06/07/2000
-Srijarko Roy 19 08/11/2001
+IndiraDutta 20 2000
+AnkitMathur 20 2000
+AdarshSrivastava 20,2000
+ArchiHaldar 20 2000
+AdityaMishra 20 2000
+UmangShringi 20 2000
+SrijarkoRoy 18 2001
+PushpeshKamal 20 2000
+Yash 20 2000
