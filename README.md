@@ -21,7 +21,7 @@ Creating a virtual Rube Goldberg Machine with ADTs. The ADTs used includes the q
 ## Data-Structures with Real-Life Examples
 
 ### Linked List
-A linked list is a linear data structure, in which the elements are not <img src = "assets/linked list.jpg" height = "125" align = "right"> stored at contiguous memory locations. The elements in a linked list are linked using pointers. In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+A linked list is a linear data structure, in which the elements are not stored at <img src = "assets/linkedlist.jpg" height = "125" align = "right"> contiguous memory locations. The elements in a linked list are linked using pointers. In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
 
 <br>
 
