@@ -75,6 +75,11 @@ Stack is a linear data structure which follows a particular order in which <img 
 
 <hr>
 
+## Demonstration:
+![](assets/tutorial.gif)
+
+<hr>
+
 ## Contributors:
 
 - <a href = "https://github.com/am9964">Ankit Mathur</a>
