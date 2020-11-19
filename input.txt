@@ -1,4 +1,4 @@
 Indira	Dutta	20	31/10/2000
 Ankit	Mathur	20	25/10/2000
-Adarsh	Srivastava	20	06/11/2000
+Adarsh	Srivastava	20	06/07/2000
 Srijarko	Roy	19	08/11/2001
