@@ -157,7 +157,7 @@ In QuickSortRecur(), we first call partition() which places pivot at correct pos
 <hr>
 
 ## Demonstration:
-![](assets/tutorial.gif)
+![](assets/exe_tutorial.gif)
 
 <hr>
 
