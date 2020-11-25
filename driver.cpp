@@ -338,7 +338,7 @@ int main()
             cout << "ENTER YEAR OF BIRTH: " << endl;
             cin >> DOB;
 			
-			
+	    strcat(Name, LastName); 		
             q1.Insertion(Name, age, DOB);
         }
         while (getline(file, text))
