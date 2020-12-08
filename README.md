@@ -166,3 +166,4 @@ In QuickSortRecur(), we first call partition() which places pivot at correct pos
 - <a href = "https://github.com/am9964">Ankit Mathur</a>
 - <a href = "https://github.com/indiradutta">Indira Dutta</a>
 - <a href = "https://github.com/srijarkoroy">Srijarko Roy</a>
+- <a href = "https://github.com/AdarshSrivastava63">Adarsh Srivastava</a>
